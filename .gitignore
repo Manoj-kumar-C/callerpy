@@ -1,0 +1,11 @@
+.pytest_cache
+
+.mypy_cache
+
+tests/__pycache__
+truecallerpy/__pycache__
+truecallerpy/data/__pycache__
+truecallerpy/typings/__pycache__
+
+dist
+build

@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "truecallerpy"
+version = "0.2.1"
+description = "A Python package to retrieve details of phone numbers using Truecaller"
+authors = ["sumithemmadi <sumithemmadi@gmail.com>"]
+maintainers = ["sumithemmadi <sumithemmadi@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/sumithemmadi/truecallerpy.git"
+repository = "https://github.com/sumithemmadi/truecallerpy.git"
+documentation = "https://github.com/sumithemmadi/truecallerpy.git"
+keywords = [
+    "truecallerpy",
+    "truecaller",
+    "phonenumber",
+    "information",
+    "retrieve",
+    "numbers",
+    "address",
+    "details",
+    "caller",
+    "search",
+    "attack",
+    "phone",
+    "email",
+    "force",
+    "find",
+    "spy",
+]
+
+classifiers = [
+    "Topic :: Utilities",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+include = ["README.md", "LICENSE"]
+exclude = ["tests"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+phonenumbers = "^8.13.16"
+questionary = "^1.10.0"
+colorama = "^0.4.6"
+pytest = "^7.4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"
+mypy = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+truecallerpy = "truecallerpy.cli:main"
+
+[tool.mypy]
+strict = true
+files = [
+    "truecallerpy/login.py",
+    "truecallerpy/verify_otp.py",
+    "truecallerpy/search.py",
+    "truecallerpy/typings/truecallerpy.pyi",
+]
